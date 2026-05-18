@@ -20,10 +20,8 @@ jobs:
           python-version: '3.11'
       - run: pip install feedparser requests
       - name: 运行监控
-         env:
+        env:
           X_USERNAMES: ${{ secrets.X_USERNAMES }}
           NTFY_TOPIC:  ${{ secrets.NTFY_TOPIC }}
-          RSSHUB_BASE: https://rsshub.rssforever.com
-          RSSHUB_BASE: https://rsshub.rssforever.com
           RSSHUB_BASE: https://rsshub.rssforever.com
         run: python monitor.py
